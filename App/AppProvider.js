@@ -167,33 +167,13 @@ export class AppProvider extends React.Component {
     );
   };
 
-  // Check if user has used site before by looking at ls
-  savedSettings() {
-    let cryptoDashboardData = JSON.parse(
-      localStorage.getItem('cryptoDashboard')
-    );
-    // if we have not visited site before
-    if (!cryptoDashboardData) {
-      return { page: 'settings', firstVisit: true };
-    }
 
-    let { favourites, currentFavourite } = cryptoDashboardData;
-    return { favourites, currentFavourite };
-  }
 
   setPage = page => this.setState({ page });
 
   // filter coins with search bar
   setFilteredCoins = filteredCoins => this.setState({ filteredCoins });
 
-  // changes whether to display days/weeks/months on chart of dashboard
-  changeChartSelect = value => {
-    console.log(value);
-    this.setState(
-      { timeInterval: value, historical: null },
-      this.fetchHistorical
-    );
-  };
 
   render() {
     return (
