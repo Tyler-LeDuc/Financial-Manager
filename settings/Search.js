@@ -38,9 +38,8 @@ const handleFilter = _.debounce((inputValue, coinList, setFilteredCoins) => {
       _.includes(fuzzyResults, symbolKey) || _.includes(fuzzyResults, coinName)
     );
   });
-  // set filtered coins to what we have filtered from above
   setFilteredCoins(filteredCoins);
-}, 500);
+}, 400);
 
 function filterCoins(e, setFilteredCoins, coinList) {
   let inputValue = e.target.value;
