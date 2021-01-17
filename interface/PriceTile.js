@@ -66,8 +66,8 @@ const PriceTileStyled = styled(SelectableTile)`
 `;
 
 function PriceTile({
-  coinSymbol,
   data,
+  conSymbol,
   currentFavourite,
   setCurrentFavourite
 }) {
@@ -108,7 +108,6 @@ export default function({ price, index }) {
   let coinSymbol = Object.keys(price)[0];
   let data = price[coinSymbol]['USD'];
 
-  // we want to display the tiles differently depending what row it is on
   let TileClass = index < 5 ? PriceTile : PriceTileCompact;
 
   return (
