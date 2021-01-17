@@ -8,7 +8,7 @@ export default class Welcome extends Component {
         {({ firstVisit }) =>
           firstVisit ? (
             <div>
-              <h1>Welcome, Please Select Your Favourite Coins to Begin. </h1>
+              <h1>Please Select Your Favourite Coins to Begin. </h1>
             </div>
           ) : null
         }
