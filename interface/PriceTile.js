@@ -35,16 +35,6 @@ const numberFormat = number => {
   return +(number + '').slice(0, 7);
 };
 
-// component for display the percentage price change
-function ChangePercent({ data }) {
-  return (
-    <JustifyRight>
-      <ChangePct red={data.CHANGEPCT24HOUR < 0}>
-        {numberFormat(data.CHANGEPCT24HOUR)} %
-      </ChangePct>
-    </JustifyRight>
-  );
-}
 
 // style to compact second row of coins on dashboard
 const PriceTileStyled = styled(SelectableTile)`
