@@ -7,6 +7,6 @@ export default styled.select`
     color: #1163c9;
   border: 1px solid;
   margin: 8px;
-  height: 15px;
+  height: 25px;
   float: right;
 `;
